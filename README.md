@@ -61,7 +61,7 @@ You can reach out to me through the following channels:
 
 - Email: [joucknuckbr@gmail.com](mailto:joucknuckbr@gmail.com)
 - LinkedIn: [Nuno's profile](https://www.linkedin.com/in/nuno-oliveira-x/)
-- Portfolio Website: [Nuno's Portfolio Website](https://www.yourportfolio.com)
+- Portfolio Website: [Nuno's Portfolio Website](https://joucknuck-br.github.io/portfolio/)
 
 Feel free to connect with me, and I'd be happy to discuss collaboration opportunities or answer any questions you may have.
 
