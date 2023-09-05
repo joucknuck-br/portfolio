@@ -5034,7 +5034,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: #bd5d38;
-  transition: width 0.6s ease;
+  transition: width 1s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .progress-bar {
@@ -11467,19 +11467,15 @@ section.resume-section .resume-section-content {
 }
 
 .html {
-  width: 85%;
+  width: 80%;
 }
 
 .java {
-  width: 75%;
+  width: 85%;
 }
 
 .python {
-  width: 50%;
-}
-
-.html {
-  width: 75%;
+  width: 80%;
 }
 
 .css {
@@ -11495,7 +11491,7 @@ section.resume-section .resume-section-content {
 }
 
 .docker {
-  width: 65%;
+  width: 70%;
 }
 
 .node {

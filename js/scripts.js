@@ -36,3 +36,29 @@ window.addEventListener('DOMContentLoaded', event => {
 window.addEventListener('focus', event => {
 
 });
+
+const progressBars = document.querySelectorAll('.progress-bar');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: [0, 0.5, 1], // Detect both entering and exiting the viewport
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const progressBar = entry.target;
+
+    if (entry.intersectionRatio >= 0.5) {
+      progressBar.style.width = getComputedStyle(progressBar).getPropertyValue('--original-width');
+      progressBar.classList.add('animate-progress');
+    } else {
+      progressBar.style.width = '0%';
+      progressBar.classList.remove('animate-progress');
+    }
+  });
+}, options);
+
+progressBars.forEach(progressBar => {
+  observer.observe(progressBar);
+});
