@@ -62,3 +62,37 @@ const observer = new IntersectionObserver(entries => {
 progressBars.forEach(progressBar => {
   observer.observe(progressBar);
 });
+
+emailjs.init("VAes4-PBCuqAG94ik"); // Replace with your Email.js user ID
+
+        document.getElementById("sendButton").addEventListener("click", function() {
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            emailjs.send("service_w61tdfx", "template_bqcokkb", {
+                user_email: email,
+                subject: subject,
+                message: message
+            })
+            .then(function(response) {
+                displayModal("Email sent successfully!");
+                console.log("Email sent successfully:", response);
+            })
+            .catch(function(error) {
+                displayModal("Email could not be sent. Please try again later.");
+                console.error("Email could not be sent:", error);
+            });
+        });
+
+function displayModal(message) {
+            const modal = document.getElementById("myModal");
+            const modalMessage = document.getElementById("modalMessage");
+
+            modalMessage.textContent = message;
+            modal.style.display = "block";
+
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, 6000);
+        }
