@@ -63,14 +63,14 @@ progressBars.forEach(progressBar => {
   observer.observe(progressBar);
 });
 
-emailjs.init("VAes4-PBCuqAG94ik"); // Replace with your Email.js user ID
+emailjs.init("uvXxWtCSdOpx2Jmt2"); // Replace with your Email.js user ID
 
         document.getElementById("sendButton").addEventListener("click", function() {
             const email = document.getElementById("email").value;
             const subject = document.getElementById("subject").value;
             const message = document.getElementById("message").value;
 
-            emailjs.send("service_w61tdfx", "template_bqcokkb", {
+            emailjs.send("service_w61tdfx","template_bqcokkb", {
                 user_email: email,
                 subject: subject,
                 message: message
